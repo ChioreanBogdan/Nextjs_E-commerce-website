@@ -1,6 +1,7 @@
 # Nextjs_E-commerce-website
 
 Online link: 
+
 e-commerce website with Next.js using Prisma and MongoDB for database management,Tailwind CSS and DaisyUI for UI
 
 
@@ -13,17 +14,17 @@ e-commerce website with Next.js using Prisma and MongoDB for database management
   The ProductCard component is wrapped in a link that takes the user to the product detail page,if the id of the product in the product card is found,otherwise,the user will be redirected to the not found page.Upon success, the user is shown a page containing the product image,name,price,description and an "Add To Cart" button.
 
 **Adding a product**
-  In the current state of the project any user can add a product to the website,however,they must be logged in via Google account using the UserMenuButton component,found to the right of the NavBar.Once logged in,the user can get to the add product page by adding "add-product" to the URL.To add a new product the user will be prompted to fill out a form containing the following fields: name, description,image url and price,leaving any of these fields open will throw a "Missing required fields" error,also, image URLs can only be imported from the 
+  In the current state of the project any user can add a product to the website,however,they must be logged in via Google account using the UserMenuButton component,found to the right of the NavBar.Once logged in,the user can get to the add product page by adding "add-product" to the URL.To add a new product the user will be prompted to fill out a form containing the following fields: name, description,image url and price,leaving any of these fields open will throw a "Missing required fields" error,also, image URLs can only be imported from "unsplash.com" because that is the only image hosting site that is given permission in the next.config file for now.
 
 **Pagination**
 
   Navigation through the different pages is done using the <NavigationBar> component,based on the number of items in the database and the current page,this component will calculate a minimum and maximum page number to be displayed and will render a number of Highest_page_number_to_be_displayed-Lowest_page_number_to_be_displayed JSX.Element numberedPageItems elements,it will also check what the current page number is and disable the link corresponding to that page number.When a page is clicked the "?page="+the page is added to the URL address,so,changing the page number directly in the URL address will not work.
 
-  **Search function**
+**Search function**
 
-     The searchbar is located in the NavBar component at the top of the screen,
+     The searchbar is located in the NavBar component at the top of the screen,this will execute the SearchPage function,in the database 
 
-   **Data source**
+**Data source**
 
      The data source for this project is a MongoDB database,through a Prisma ORM,and contains information about various objects:products,cartitems(stores the productid and quantity of a product contained within a cart),carts ,user accounts,sessions,etc.
   
