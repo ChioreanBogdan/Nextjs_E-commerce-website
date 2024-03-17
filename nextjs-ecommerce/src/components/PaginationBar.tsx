@@ -6,9 +6,9 @@ interface PaginationBarProps{
                             };
 
 export default function PaginationBar({currentPage,totalPages}:PaginationBarProps) {
-    //maxPage nr maxim de pagini ce va fi afisat
+    //maxPage nr maxim de pagina ce va fi afisat
     const maxPage =Math.min(totalPages,Math.max(currentPage+4,10))
-    //minPage nr minim de pagini ce va fi afisat
+    //minPage nr minim de pagina ce va fi afisat
     const minPage =Math.max(1,Math.min(currentPage-5,maxPage-9))
 
     const numberedPageItems: JSX.Element[] = []

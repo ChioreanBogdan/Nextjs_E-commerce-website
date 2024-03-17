@@ -26,6 +26,7 @@ const currentPage=parseInt(page)
 
   const products = await prisma.product.findMany({
       orderBy:{id:"desc"},
+      //Assert if current page is 0,if so assign 0,if not,assign heroitemcount
       skip:(currentPage-1)*pageSize + (currentPage===1 ?  0 : heroItemCount),
       //take: pageSize+(currentPage === 1 ? heroItemCount : 0),daca vrem pageSize+heroItemCount pe prima pagina
       take: pageSize+(currentPage === 1 ? 0 : 0),
