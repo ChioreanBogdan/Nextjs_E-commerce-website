@@ -22,10 +22,16 @@ e-commerce website with Next.js using Prisma and MongoDB for database management
 
 **Search function**
 
-     The searchbar is located in the NavBar component at the top of the screen,this will execute the SearchPage function,in the database 
+     The searchbar is located in the NavBar component at the top of the screen,this will execute the SearchProducts function,which will redirect the user to the search page.Using the searchQuery parameter passed in the searchbar,the SearchPage function will compare all the name and description attributes of the "Product" objects in the database to the passed searchQuery,ignoring case sensitivity.
 
 **Data source**
 
      The data source for this project is a MongoDB database,through a Prisma ORM,and contains information about various objects:products,cartitems(stores the productid and quantity of a product contained within a cart),carts ,user accounts,sessions,etc.
+
+**Other features**
+
+  - Login via user's Google account,using Next-Auth
+  - Database Cart and CartItem items,for user shoppingcarts,accesibile whether the user is logged in or not
+  - Cart page where the user can view all the items he has selected and their quantity,as well as the price total
   
 
